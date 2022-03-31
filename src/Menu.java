@@ -3,12 +3,18 @@ Using a hash map to store all the menu items for the mobile app
  */
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Menu {
 
     public static HashMap<String, Integer> menuItems = new HashMap<String, Integer>();
 
     public static void main (String [] args){
+    	Scanner input = new Scanner(System.in);
+    	
+    	System.out.println("Welcome to the CSC109 Mobile Ordering App. Please input your order.");
+    	String userInput = input.nextLine();
+    	
         menuItems.put("Banana Bread", 65);
         menuItems.put("Lemon Bread", 65);
         menuItems.put("Pumpkin Bread", 65);
