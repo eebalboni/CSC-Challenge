@@ -8,8 +8,15 @@ import java.util.Scanner;
 public class Menu {
 
     public static HashMap<String, Integer> menuItems = new HashMap<String, Integer>();
+<<<<<<< HEAD
     public static void main(String [] args){}
     public Menu (){
+=======
+
+    public static void main (String [] args){}
+
+    public Menu(){
+>>>>>>> 82335c2fdb51cca8ed335449feb1bdef3cc77c06
         menuItems.put("Banana Bread", 65);
         menuItems.put("Lemon Bread", 65);
         menuItems.put("Pumpkin Bread", 65);
@@ -29,7 +36,6 @@ public class Menu {
         menuItems.put("Vanilla Cake Pop", 30);
         menuItems.put("Oatmeal",15);
     }
-
     //adds a new item to the inventory
     public void setItem(int numOfItem, String itemName) {
         menuItems.put(itemName, numOfItem);
@@ -51,8 +57,12 @@ public class Menu {
         menuItems.remove(item);
     }
 
+<<<<<<< HEAD
     public void printItems(){
         System.out.println(menuItems);
     }
+=======
+    
+>>>>>>> 82335c2fdb51cca8ed335449feb1bdef3cc77c06
 
 }
