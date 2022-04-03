@@ -8,9 +8,7 @@ import java.util.Scanner;
 public class Menu {
 
     public static HashMap<String, Integer> menuItems = new HashMap<String, Integer>();
-
     public static void main (String [] args){}
-
     public Menu(){
         menuItems.put("Banana Bread", 65);
         menuItems.put("Lemon Bread", 65);
@@ -52,6 +50,8 @@ public class Menu {
         menuItems.remove(item);
     }
 
-    
+    public void printItems(){
+        System.out.println(menuItems);
+    }
 
 }
