@@ -50,8 +50,17 @@ public class Menu {
         menuItems.remove(item);
     }
 
+    // Prints Items
     public void printItems(){
         System.out.println(menuItems);
+    }
+    
+    public Boolean checkItem(String item) {
+    	if (menuItems.containsKey(item)) {
+    		return true;
+    	} else {
+    		return false;
+    	}
     }
 
 }
