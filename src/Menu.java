@@ -53,5 +53,5 @@ public class Menu {
     public void printItems(){
         System.out.println(menuItems);
     }
-    
+
 }
