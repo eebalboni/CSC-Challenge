@@ -16,7 +16,7 @@ public class Inventory {
         	String userInput = input.nextLine();
         	// User Input + Update Items
         	if (menu.checkItem(userInput) == true) {
-        		// Update Item
+        		// Update Item	
         	} else {
         		System.out.println("That option is not on the menu. Please make another selection.");
         	}
