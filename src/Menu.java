@@ -40,10 +40,18 @@ public class Menu {
         return menuItems.get(item);
     }
 
-    //updates the inventory of the item
+    //updates the inventory of the item by removing items that were ordered
     public void updateItemCount(String item, int num){
         int temp = menuItems.get(item);
-        menuItems.put(item, (temp - num));
+
+        //if menu item is in stock and the order doesn't put the inventory into the negatives
+        if(menuItems.get(item) > 0 && temp-num >=0 ){
+            menuItems.put(item, (temp - num));
+        }
+        //if there is nothing left of the inventory remove the item
+        if(menuItems.get(item) == 0){
+            removeItem(item);
+        }
     }
 
     //remove item from inventory
@@ -51,7 +59,7 @@ public class Menu {
         menuItems.remove(item);
     }
 
-    // Prints Items
+    // Prints Items in hashmap
     public void printItems(){
         System.out.println(menuItems);
     }
@@ -82,7 +90,7 @@ public class Menu {
     		list.add(key);
     	}
     	
-    	String random = list.get(Math.random() * list.size());
+    	String random = list.get((int) (Math.random() * list.size()));
     	int randomInt = (int) (Math.random() * 10); 
     	updateItemCount(random, randomInt);
     }
