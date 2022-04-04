@@ -6,8 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+// CSC109 Challenge - Food Mobile Order App
+// Menu 
+// Authors: Emily, Garrett, and 
+
 public class Menu {
 
+	// Creates Menu Hash Map
     public static HashMap<String, Integer> menuItems = new HashMap<String, Integer>();
     public static void main (String [] args){}
     public Menu(){
@@ -64,6 +69,7 @@ public class Menu {
         System.out.println(menuItems);
     }
 
+    // Prints available Items 
     public void printAvailable() {
     	String available = "";
     	for ( String key : menuItems.keySet() ) {
@@ -76,6 +82,7 @@ public class Menu {
     	System.out.println(available);
     }
     
+    // Checks if item is available
     public Boolean checkItem(String item) {
     	if (menuItems.containsKey(item)) {
     		return true;
@@ -84,6 +91,8 @@ public class Menu {
     	}
     }
     
+    
+    // Updates the Menu using random ints
     public void inPersonUpdate() {
     	ArrayList<String> list = new ArrayList<String>();
     	for ( String key : menuItems.keySet() ) {

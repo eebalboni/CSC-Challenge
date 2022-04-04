@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
+//CSC109 Challenge - Food Mobile Order App
 //Main class for our mobile app
+//Authors: Emily, Garrett, and 
+
 public class Inventory {
     private static Menu menu = new Menu();
     public static void main (String [] args){
