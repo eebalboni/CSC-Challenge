@@ -82,7 +82,7 @@ public class Menu {
     		list.add(key);
     	}
     	
-    	String random = list.get(Math.random() * list.size());
+    	String random = list.get((int) (Math.random() * list.size()));
     	int randomInt = (int) (Math.random() * 10); 
     	updateItemCount(random, randomInt);
     }
