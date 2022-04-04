@@ -75,4 +75,13 @@ public class Menu {
     		return false;
     	}
     }
+    
+    public void inPersonUpdate() {
+    	@SuppressWarnings("unchecked")
+		ArrayList<String> list = (ArrayList<String>) menuItems.keySet();
+    	
+    	String item = list.get((int) (Math.random() * menuItems.size()));
+    	int num = (int)(Math.random() * 20);
+    	updateItemCount(item, num);
+    }
 }
