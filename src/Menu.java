@@ -75,4 +75,15 @@ public class Menu {
     		return false;
     	}
     }
+    
+    public void inPersonUpdate() {
+    	ArrayList<String> list = new ArrayList<String>();
+    	for ( String key : menuItems.keySet() ) {
+    		list.add(key);
+    	}
+    	
+    	String random = list.get(Math.random() * list.size());
+    	int randomInt = (int) (Math.random() * 10); 
+    	updateItemCount(random, randomInt);
+    }
 }
