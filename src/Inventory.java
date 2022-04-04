@@ -16,7 +16,7 @@ public class Inventory {
         	String userInput = input.nextLine();
         	// User Input + Update Items
         	if (menu.checkItem(userInput) == true) {
-        		// Update Item
+        		// Update Item	
         	} else {
         		System.out.println("That option is not on the menu. Please make another selection.");
         	}
@@ -24,10 +24,10 @@ public class Inventory {
         	System.out.println("Would you like to make another purchase?");
         	String finalInput = input.nextLine();
         	if (finalInput.equalsIgnoreCase("yes")) {
+        		System.out.println("Please make another selection.");
+        	} else if (finalInput.equalsIgnoreCase("no")) {
         		System.out.println("Thank you for ordering. Have a good day.");
         		response = true;
-        	} else if (finalInput.equalsIgnoreCase("no")) {
-				System.out.println("Please make another selection.");
 			}
         }
     }
