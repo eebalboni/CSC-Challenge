@@ -1,6 +1,7 @@
 /*
 Using a hash map to store all the menu items for the mobile app
  */
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -54,6 +55,18 @@ public class Menu {
     public void printItems(){
         System.out.println(menuItems);
     }
+
+    public void printAvailable() {
+    	String available = "";
+    	for ( String key : menuItems.keySet() ) {
+    	    if (this.getItemCount(key) > 0)
+    	    {
+    	    	available += (key + ", ");
+    	    }
+    	}
+    	available = available.substring(0, available.length() - 3);
+    	System.out.println(available);
+    }
     
     public Boolean checkItem(String item) {
     	if (menuItems.containsKey(item)) {
@@ -62,5 +75,4 @@ public class Menu {
     		return false;
     	}
     }
-
 }
